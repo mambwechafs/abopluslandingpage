@@ -1,0 +1,359 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ABO PLUS: Your Ultimate Streaming Experience</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <link rel="shortcut icon" type="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+  <link rel="shortcut icon" type="apple-touch-icon" href="{% static 'img/android-chrome-192x192' %}">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1><a href="index.html">ABO Plus</a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#features">Content</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+          
+          <li><a class="nav-link scrollto" href="#faq">F.A.Q</a></li>
+        
+          <li><a class="getstarted scrollto" href="#features">Sign Up</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+<section id="hero" class="d-flex align-items-center">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
+        <div>
+          <h1>ABO PLUS: Your Ultimate Streaming Experience</h1>
+          <h2>Discover a world of entertainment tailored for you. Immerse yourself in captivating shows, movies, and more, right at your fingertips.</h2>
+          <a href="#" class="download-btn"><i class="bx bxl-play-store"></i> Get it on Google Play</a>
+          <a href="#" class="download-btn"><i class="bx bxl-apple"></i> Download on the App Store</a>
+        </div>
+      </div>
+      <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img" data-aos="fade-up">
+        <img src="{% static 'img/hero-img.png' %}" class="img-fluid" alt="ABO PLUS App Screenshot">
+      </div>
+    </div>
+  </div>
+
+</section><!-- End Hero -->
+  <main id="main">
+
+   <!-- ======= App Features Section ======= -->
+<section id="features" class="features">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Explore Our Diverse Content</h2>
+      <p>Discover a wide range of engaging and educational content tailored for your interests. Immerse yourself in captivating stories, documentaries, and more, right at your fingertips.</p>
+    </div>
+
+    <div class="row no-gutters">
+      <div class="col-xl-7 d-flex align-items-stretch order-2 order-lg-1">
+        <div class="content d-flex flex-column justify-content-center">
+          <div class="row">
+            <div class="col-md-6 icon-box" data-aos="fade-up">
+              <i class="bx bx-show"></i>
+              <h4>Animation Series</h4>
+              <p>This genre contains the largest house of Zambian’s best Animated Films from the country's top Animation houses.</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-planet"></i>
+              <h4>Astronomy Series</h4>
+              <p>Explore the largest Digital Video Library of Astronomy content developed by Zambia's brightest minds in Astronomy, Physics, and Mathematics.</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-user"></i>
+              <h4>Biographies Series</h4>
+              <p>Discover a collection of professionally made films on Zambia's most admirable personalities and legends.</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-file"></i>
+              <h4>Documentary Series</h4>
+              <p>Experience professionally made video Documentaries covering Zambia's most incredible events, political scandals, and more.</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-flask"></i>
+              <h4>Science Series</h4>
+              <p>Explore a collection of African-made Science Documentaries featuring brilliant minds in Engineering, Medicine, and Natural Sciences.</p>
+            </div>
+            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-play"></i>
+              <h4>Now Showing</h4>
+              <p>Enjoy a diverse range of the best Movies and TV Shows across various genres such as Horror, Action, Romance, and more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="image col-xl-5 d-flex align-items-stretch justify-content-center order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+        <img src="{% static 'img/features.svg' %}" class="img-fluid" alt="App Features">
+      </div>
+    </div>
+
+  </div>
+</section><!-- End App Features Section -->
+
+
+    <!-- ======= Details Section ======= -->
+   <section id="details" class="details">
+  <div class="container">
+
+    <div class="row content">
+      <div class="col-md-4" data-aos="fade-right">
+        <img src="{% static 'img/details-1.png' %}" class="img-fluid" alt="Details Image">
+      </div>
+      <div class="col-md-8 pt-4" data-aos="fade-up">
+        <h3>BoxOffice: Premium Content On Demand</h3>
+        <p class="fst-italic">
+          Experience the latest and greatest in Zambian cinema and entertainment, all in one place.
+        </p>
+        <ul>
+          <li><i class="bi bi-check"></i> Access premium and newly produced content, just like in cinemas.</li>
+          <li><i class="bi bi-check"></i> Enjoy a wide range of movies, TV shows, and animated series.</li>
+          <li><i class="bi bi-check"></i> Only available for purchase within the BoxOffice tab.</li>
+          <li><i class="bi bi-check"></i> Content stays available for a maximum of 3 months.</li>
+        </ul>
+        <p>
+          Movies on BoxOffice offer a unique opportunity to enjoy premium content without waiting. They're available for a limited time before becoming streamable and downloadable through ABO PLUS subscriptions.
+        </p>
+        <p>
+          Subscribers within Zambia can access these movies for just K110 per month, while international subscribers can enjoy them for $5.99.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Details Section -->
+
+
+<!-- ======= Pricing Section ======= -->
+<section id="pricing" class="pricing">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Pricing</h2>
+      <p>Choose the plan that suits your needs.</p>
+    </div>
+
+    <div class="row no-gutters">
+      <div class="col-lg-4 box" data-aos="fade-right">
+        <h3>{{ basic_plan.name }}</h3>
+        <h4>${{ basic_plan.price }}<span>per month</span></h4>
+        <ul>
+          {% for feature in basic_plan.features %}
+            <li><i class="bx bx-check"></i> {{ feature }}</li>
+          {% endfor %}
+        </ul>
+        <a href="#" class="get-started-btn">Get Started</a>
+      </div>
+
+      <div class="col-lg-4 box featured" data-aos="fade-up">
+        <h3>{{ standard_plan.name }}</h3>
+        <h4>${{ standard_plan.price }}<span>per month</span></h4>
+        <ul>
+          {% for feature in standard_plan.features %}
+            <li><i class="bx bx-check"></i> {{ feature }}</li>
+          {% endfor %}
+        </ul>
+        <a href="#" class="get-started-btn">Get Started</a>
+      </div>
+
+      <div class="col-lg-4 box" data-aos="fade-left">
+        <h3>{{ premium_plan.name }}</h3>
+        <h4>${{ premium_plan.price }}<span>per month</span></h4>
+        <ul>
+          {% for feature in premium_plan.features %}
+            <li><i class="bx bx-check"></i> {{ feature }}</li>
+          {% endfor %}
+        </ul>
+        <a href="#" class="get-started-btn">Get Started</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Pricing Section -->
+
+
+    
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+<section id="faq" class="faq section-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Frequently Asked Questions</h2>
+      <p>Find answers to common questions about ABO PLUS, your ultimate Zambian streaming experience.</p>
+    </div>
+
+    <div class="accordion-list">
+      <ul>
+        <li data-aos="fade-up">
+          <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">What is ABO PLUS? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+            <p>
+              ABO PLUS is a Zambian Subscription Video on Demand (SVoD) platform that offers the best of Zambia’s Movies, TV Shows, including the Now Showing Video . Additionally, we provide PLUS ORIGINAL CONTENT, such as Animation Series, Astronomy Series, Biography Series, Documentary Series, and Science Series. For subscribers who want early access to premium Movies and TV shows, they can purchase them within the app using their credit card information. After purchasing, the content becomes streamable and downloadable.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="100">
+          <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed">How does ABO PLUS work? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+            <p>
+              ABO PLUS offers a diverse collection of Zambian movies, TV shows, and original content across various genres. Users can choose a subscription plan to access unlimited streaming of our content library. For exclusive premium content, users can purchase films using their credit card. These purchased films are available for streaming and download.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="200">
+          <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed">What is the Now Showing Video on Demand? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+            <p>
+              This is where you'll find a diverse range of the country's best Movies and TV Shows. This genre features content from various categories, including Horror, Action, Romance, Animation, Comedy, Sci-fi, Drama, Crime, and Adventure.
+            </p>
+          </div>
+        </li>
+
+
+        <li data-aos="fade-up" data-aos-delay="400">
+          <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#accordion-list-5" class="collapsed">How do I purchase films from BoxOffice? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="accordion-list-5" class="collapse" data-bs-parent=".accordion-list">
+            <p>
+              For subscribers who want to access Zambia’s most Premium Movies and TV shows before they are readily available for streaming on Now Showing, they can purchase these films from BoxOffice. Use your credit card information within the app to make the purchase. After purchase, the content will be readily available for streaming and download.
+            </p>
+          </div>
+        </li>
+
+        <!-- Add more FAQ items as needed -->
+
+      </ul>
+    </div>
+
+  </div>
+</section><!-- End Frequently Asked Questions Section -->
+
+
+  
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-newsletter">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <h4>Unlock a World of Entertainment!</h4>
+        <p>Join ABO PLUS today to experience the best of Zambian cinema and exclusive original content.</p>
+        <a href="#" class="btn btn-danger">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>ABO PLUS</h3>
+            <p>
+            Discover the essence of Zambian entertainment with ABO PLUS. Our platform is a hub for premium Zambian content, ranging from captivating movies to engaging TV shows. Immerse yourself in a world of diverse genres, including Animation, Astronomy, Biography, Documentary, and Science. Our mission is to showcase the richness of Zambian storytelling and culture through our carefully curated selection. Join us on this journey as we bring you the very best of Zambian cinema and original content. ABO PLUS – Where Zambian Entertainment Shines.
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4></h4>
+            <ul>
+              
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4></h4>
+            <ul>
+           
+            </ul>
+          </div>
+
+         <div class="col-lg-3 col-md-6 footer-links">
+  <h4>Stay Connected</h4>
+  <p>Connect with us on our social media platforms to stay updated with the latest news, releases, and more.</p>
+  <div class="social-links">
+    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+          &copy; Copyright <strong><span>ABO PLUS </span></strong>. All Rights Reserved <span id="current-year"></span>
+        </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+  <script>
+		document.getElementById("current-year").innerHTML = new Date().getFullYear();
+	</script>
+
+</body>
+
+</html>
