@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!8n8c(=6m6v3+ik5ck9%d6mp3h^s3i2o*dfl5ilp)c169bzm%7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -118,6 +119,22 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'landingpage', 'static'),  # Static files for the 'home' app
+   
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
+# Enable WhiteNoise features
+WHITENOISE_USE_FINDERS = True # Use static files finders to handle static files from apps with migrations
+WHITENOISE_COMPRESS = True # Compress all eligible files once, at startup
+WHITENOISE_IMMUTABLE_FILE_TEST = r'\.[0-9a-f]{8}\.' # Use immutable file names for better caching
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
