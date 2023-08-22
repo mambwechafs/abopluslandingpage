@@ -118,7 +118,11 @@
               <h4>Science Series</h4>
               <p>Explore a collection of African-made Science Documentaries featuring brilliant minds in Engineering, Medicine, and Natural Sciences.</p>
             </div>
-           
+             <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-play"></i>
+              <h4>Now Showing</h4>
+              <p>This is the SVoD’s largest and most diverse genre housing the countries best Movies and Tv Shows. Movies from a multitude of categories such as Horror, Thriller, Action, Romance, Animation, Comedy, Sci-fi, Drama, Crime and Adventure. </p>
+            </div>
           </div>
         </div>
       </div>
@@ -130,7 +134,34 @@
   </div>
 </section><!-- End App Features Section -->
 
+ <section id="gallery" class="gallery">
+      <div class="container" data-aos="fade-up">
 
+
+      </div>
+
+
+  <div class="container-fluid" data-aos="fade-up">
+    <div class="gallery-slider swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="{% static 'img/gallery/1.png' %}" class="gallery-lightbox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/1.png' %}" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><a href="{% static 'img/gallery/2.png' %}" class="gallery-lightbox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/2.png' %}" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><a href="{% static 'img/gallery/3.png' %}" class="gallery-lightbox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/3.png' %}" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><a href="{% static 'img/gallery/4.png' %}" class="gallery-lightbox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/4.png' %}" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><a href="{% static 'img/gallery/5.png' %}" class="gallery-lightbox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/5.png' %}" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><a href="{% static 'img/gallery/6.png' %}" class="gallery-lightbox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/6.png' %}" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><a href="{% static 'img/gallery/7.png' %}" class="gallery-lightbox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/7.png' %}" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><a href="{% static 'img/gallery/8.png' %}" class="gallery-lightbox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/8.png' %}" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><a href="{% static 'img/gallery/9.png' %}" class="gallery-lightbox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/9.png' %}" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><a href="{% static 'img/gallery/10.png' %}" class="gallery-lightbox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/10.png' %}" class="img-fluid" alt=""></a></div>
+        <div class="swiper-slide"><a href="{% static 'img/gallery/11.png' %}" class="gallery-lightbox" data-gall="gallery-carousel"><img src="{% static 'img/gallery/11.png' %}" class="img-fluid" alt=""></a></div>
+        
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+</section><!-- End Gallery Section -->
     <!-- ======= Details Section ======= -->
    <section id="details" class="details">
   <div class="container">
@@ -144,17 +175,18 @@
         <p class="fst-italic">
           Experience the latest and greatest in Zambian cinema and entertainment, all in one place.
         </p>
-        <ul>
+        <p>
+          On BoxOffice, all of the countries most Premium or newly produced content that goes to Cinema will be available for purchase right within the tab. Not only Movies, even film Tv Shows or Animated Tv Shows if they meet Avaeyl Studios standards for this category will be on this tab.
+Movies on BoxOffice will not be here permanently. 
+        </p>
+        <!-- <ul>
           <li><i class="bi bi-check"></i> Access premium and newly produced content, just like in cinemas.</li>
           <li><i class="bi bi-check"></i> Enjoy a wide range of movies, TV shows, and animated series.</li>
           <li><i class="bi bi-check"></i> Only available for purchase within the BoxOffice tab.</li>
           <li><i class="bi bi-check"></i> Content stays available for a maximum of 3 months.</li>
-        </ul>
+        </ul> -->
         <p>
-          Movies on BoxOffice offer a unique opportunity to enjoy premium content without waiting. They're available for a limited time before becoming streamable and downloadable through ABO PLUS subscriptions.
-        </p>
-        <p>
-          Subscribers within Zambia can access these movies for just K110 per month, while international subscribers can enjoy them for $5.99.
+        Content here can only be in for a maximum period of 3 Months.After which, It becomes streamable and downloadable by ABO PLUS subscribers within their K110 monthly subscription for the Zambian version, but $5.99 for international subscribers.
         </p>
       </div>
     </div>
@@ -169,37 +201,15 @@
 
     <div class="section-title">
       <h2>Pricing</h2>
-      <p>Choose the plan that suits your needs.</p>
+      <p>Choose the ABO PLUS subscription that suits your needs.</p>
     </div>
 
     <div class="row no-gutters">
       <div class="col-lg-4 box" data-aos="fade-right">
-        <h3>{{ basic_plan.name }}</h3>
-        <h4>${{ basic_plan.price }}<span>per month</span></h4>
+        <h3>{{ subscription_name }} Subscription</h3>
+        <h4>{{ zambia_price }}/month (Zambia), {{ world_price }}/month (Rest of the World)</h4>
         <ul>
-          {% for feature in basic_plan.features %}
-            <li><i class="bx bx-check"></i> {{ feature }}</li>
-          {% endfor %}
-        </ul>
-        <a href="#" class="get-started-btn">Get Started</a>
-      </div>
-
-      <div class="col-lg-4 box featured" data-aos="fade-up">
-        <h3>{{ standard_plan.name }}</h3>
-        <h4>${{ standard_plan.price }}<span>per month</span></h4>
-        <ul>
-          {% for feature in standard_plan.features %}
-            <li><i class="bx bx-check"></i> {{ feature }}</li>
-          {% endfor %}
-        </ul>
-        <a href="#" class="get-started-btn">Get Started</a>
-      </div>
-
-      <div class="col-lg-4 box" data-aos="fade-left">
-        <h3>{{ premium_plan.name }}</h3>
-        <h4>${{ premium_plan.price }}<span>per month</span></h4>
-        <ul>
-          {% for feature in premium_plan.features %}
+          {% for feature in features %}
             <li><i class="bx bx-check"></i> {{ feature }}</li>
           {% endfor %}
         </ul>
@@ -209,10 +219,7 @@
 
   </div>
 </section><!-- End Pricing Section -->
-
-
     
-
     <!-- ======= Frequently Asked Questions Section ======= -->
 <section id="faq" class="faq section-bg">
   <div class="container" data-aos="fade-up">
@@ -228,7 +235,7 @@
           <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1">What is ABO PLUS? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
           <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
             <p>
-              ABO PLUS is a Zambian Subscription Video on Demand (SVoD) platform that offers the best of Zambia’s Movies, TV Shows, including the Now Showing Video . Additionally, we provide PLUS ORIGINAL CONTENT, such as Animation Series, Astronomy Series, Biography Series, Documentary Series, and Science Series. For subscribers who want early access to premium Movies and TV shows, they can purchase them within the app using their credit card information. After purchasing, the content becomes streamable and downloadable.
+              ABO PLUS is a Zambian Subscription Video on Demand (SVoD) platform that offers the best of Zambia’s Movies and TV Shows. Additionally, we provide PLUS ORIGINAL CONTENT, these are Animation Series, Astronomy Series, Biography Series, Documentary Series, and Science Series. For subscribers who want early access to premium Movies and TV shows, they can purchase them on Box Office using their credit card information. After purchasing, the content becomes streamable and downloadable.
             </p>
           </div>
         </li>
